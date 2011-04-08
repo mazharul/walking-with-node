@@ -1,0 +1,26 @@
+##Commands
+git clone https://github.com/joyent/node.git
+cd node
+export JOBS=2 # optional, sets number of parallel commands.
+mkdir ~/local
+./configure --prefix=$HOME/local/node
+make
+make install
+export PATH=$HOME/local/node/bin:$PATH
+
+##wscript:232: error: could not configure a cxx compiler!
+sudo aptitude install build-essential
+
+##wscript:340: error: Could not autodetect OpenSSL support. Make sure OpenSSL development packages are installed. Use configure --without-ssl to disable this message.
+
+sudo apt-get install libssl-dev
+
+##install curl
+sudo aptitude install curl
+
+##install npm
+curl http://npmjs.org/install.sh | sh
+
+
+
+
